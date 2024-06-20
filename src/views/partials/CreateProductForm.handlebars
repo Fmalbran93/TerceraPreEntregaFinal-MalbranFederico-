@@ -1,0 +1,54 @@
+<form class="row g-3 mt-4 mb-5 border p-4 rounded mx-4" id="formProduct">
+    <h2 class="mb-4 text-center border-bottom">Crear Producto</h2>
+    <div class="col-md-6">
+        <div class="input-group">
+            <input class="form-control" type="text" name="title" id="title" placeholder="Ingresa el nombre del producto"
+                required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="input-group">
+            <input class="form-control" type="text" name="description" id="description"
+                placeholder="Ingresa la descripcion edl articulo" required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="input-group">
+            <input class="form-control" type="number" name="stock" id="stock"
+                placeholder="Ingresa las unidades disponibles del producto" required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="input-group">
+            <input class="form-control" type="text" name="thumbnail" id="thumbnail"
+                placeholder="Ingresa el link (URL) imagen del producto" required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="input-group">
+            <input class="form-control" type="text" name="category" id="category"
+                placeholder="Ingresa la categoria del producto" required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="input-group">
+            <input class="form-control" type="number" name="price" id="price"
+                placeholder="Ingresa el precio del producto" required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="input-group">
+            <input class="form-control" type="text" name="code" id="code" placeholder="Ingresa el codigo del producto"
+                required>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-check mt-4">
+            <input name="status" class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">Status</label>
+        </div>
+    </div>
+    <div class="col-12 mt-4">
+        <button class="btn btn-success" type="submit" id="add-btn">Crear producto</button>
+    </div>
+</form>

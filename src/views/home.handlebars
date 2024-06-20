@@ -1,0 +1,40 @@
+<div class="container">
+
+  <div id="carousel" class="carousel slide rounded-pill" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/heroImg1.jpg" class="d-block w-100 rounded-pill" alt="Imagen promocional 1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/heroImg2.jpg" class="d-block w-100 rounded-pill" alt="Imagen promocional 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/heroImg3.jpg" class="d-block w-100 rounded-pill" alt="Imagen promocional 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+    <div class="d-flex align-items-center justify-content-center mt-3 border boder-success rounded">
+        <img src="img.png" alt="logos" class="img-fluid">
+    </div>
+
+
+</div>
+<style>
+  .card figure img {
+    filter: blur(3px);
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .card figure:hover img {
+    filter: blur(0);
+  }
+</style>

@@ -1,0 +1,50 @@
+<div class="container mt-5">
+    <div class="d-flex align-items-center justify-content-between">
+        {{> filters}}
+        {{> categorysMenu}}
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        {{#each products}}
+        <div class="col mb-4">
+            <div class="card h-100 bg-light">
+                <div class="card-header bg-dark text-white">
+                    Codigo del producto: {{this.code}}
+                </div>
+                <div class="card-body">
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="{{this.thumbnail}}" alt="{{this.title}}" class="img-fluid mt-2">
+                        </li>
+                        <li class="mb-4 border-bottom border-top p-2 border-secondary">
+                            <h5 class="card-title text-dark text-center text-uppercase fw-bold">{{this.title}}</h5>
+                        </li>
+                        <li><p class="text-center"><span class="fw-bold text-dark">Estado:</span> {{this.status}}</p></li>
+                        <li><p class="text-center"><span class="fw-bold text-dark">Categoria:</span> {{this.category}}</p></li>
+                        <li><p class="text-center"><span class="fw-bold text-dark">Precio:</span> ${{this.price}}</p></li>
+
+                    </ul>
+                    <div class="text-center mt-5">
+                        <a class="btn btn-success text-lg" href="/products/{{this._id}}">Detalle del producto</a>
+                        <a class="btn btn-success ms-5 text-lg product" id="{{this._id}}"
+                            data-value="{{this.stock}}">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center gap-4 p-4">
+        {{#if hasPrevPage}}
+        <a class="text-success text-decoration-none fs-4 fw-bold px-5" href="{{prevLink}}">
+            <<< </a>
+                {{/if}}
+                {{#if hasNextPage}}
+                <h4 class="text-dark">{{page}}/{{totalPages}}</h4>
+                <a class="text-success text-decoration-none fs-4 fw-bold px-5" href="{{nextLink}}"> >>> </a>
+                {{/if}}
+    </div>
+</div>
+</div>
+<script src="js/sendCart.js"></script>
